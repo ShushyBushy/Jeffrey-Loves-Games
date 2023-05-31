@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jeffrey Loves Games</title>
+<link rel="shortcut icon" type="image/jpg" href="Files/Images/JeffreyLovesGamesIcon.ico"/>
+<style type="text/css">
+	@font-face { font-family: WickedMouse; src: url('Files/Fonts/wicked-mouse-font/WickedMouse-aGoK.ttf'); } 
+	@font-face { font-family: Konigsberg; src: url('Files/Fonts/koenigsberg-font/Koenigsberg-lG20.ttf'); } 
+	body {
+		background-color: #0f0f0f;
+		overflow-y: scroll;
+		color: white;
+		font-family: Konigsberg;
+		letter-spacing: 1px;
+		margin: 0;
+	}
+	body::-webkit-scrollbar {
+    	display: none;
+	}
+	#TopBar {
+		top: 0;
+		height: 66px;
+		width: 100%;
+		z-index: 1030; /* put on top of everything */
+		background-color: #0f0f0f;
+	}
+	#d {
+        position: relative;
+    }
+	#TitleIcon {
+		margin-left: 10px;
+	}
+	#BarTitle {
+		color: white;
+		letter-spacing: 2px;
+		line-height: 26px;
+		font-family: WickedMouse;
+		margin-left: 10px;
+		margin-right: 60px;
+	}
+	#FirstMessage {
+		background-image: url('Files/Images/questionsbg.jpg');
+		background-size: cover;
+		height: 500px;
+		width: 100%;
+		text-align: center;
+	}
+	#NextBlock {
+		background-color: #070707;
+		height: 100%;
+		width: 100%;
+	}
+	.BarButtons {
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-family: Konigsberg;
+		letter-spacing: 1px;
+		font-size: 15px;
+		background-color: #111111;
+		color: white;
+		margin-right: 5px;
+		height: 60px;
+		border: none;
+		transition-duration: 0.4s;
+	}
+	.BarButtons:hover { 
+   		box-shadow: 0px 1px 7px #313131;
+        background-color: #313131;
+        cursor: pointer;
+		font-size: 17px;
+    }
+	.SelectionButtons {
+		width: 100%;
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-family: Konigsberg;
+		letter-spacing: 1px;
+		font-size: 43px;
+		background-color: rgb(8, 8, 8);
+		color: white;
+		height: 100px;
+		border: none;
+		transition-duration: 0.2s;
+	}
+	.SelectionButtons:hover { 
+   		box-shadow: 0px 1px 7px #313131;
+        background-color: #313131;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+	<div id="TopBar">
+		<table style="height: 100%">
+			<tr>
+				<td><img src="Files/Images/JeffreyLovesGamesIcon.ico" width="40px" id="TitleIcon"></td>
+				<td><font id="BarTitle" size="4.9" color="black" style="text-shadow: 0px 1px 7px #A7A7A7;">JEFFREY LOVES GAMES</font></td>
+				<td><button class="BarButtons" onClick="NavButton('index.html')">Home</button></td>
+				<td><button class="BarButtons" onClick="NavButton('flashgames.html')">Flash Games</button></td>
+				<td><button class="BarButtons" onClick="NavButton('htmlgames.html')">HTML Games</button></td>
+				<td><button class="BarButtons" onClick="NavButton('soundboards.html')">Sound Boards</button></td>
+				<td><button class="BarButtons" onClick="NavButton('emulators.html')">Emulators</button></td>
+				<td><button class="BarButtons" onClick="NavButton('faq.html')">FAQ</button></td>
+				<td><button class="BarButtons" onClick="NavButton('about.html')">About</button></td>
+				<td><button class="BarButtons" onClick="NavButton('contact.html')">Contact</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="d"></div>
+	<div id="FirstMessage">
+		<div style="height: 100%">
+			<br><br><br><br>
+			<h1 style="font-size: 90px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">FAQ</h1>
+		</div>
+	</div>
+	<div id="NextBlock" style="text-align: center">
+		<br><br><br><br>
+		<h1 style="margin: 0; margin-left: 5%; font-size: 45px; width: 90%; text-shadow: 0px 1px 7px #A7A7A7;">Here are Jeffrey Loves Games most asked questions:</h1>
+		<br><br>
+		<table width="80%" style="margin-left: 10%;" height="200px">
+			<tr height="150px">
+				<td><font size="6">1. Why did you make this website?</font></td>
+				<td><font>I, Jeffrey Benne, created this website because I believe everybody has the right to play fun games. Me myself, I love to play solitaire. It's my favorite game. Whether you're somebody at home, or a student, I hope you have fun on this website.</font></td>
+			</tr>
+			<tr height="150px">
+				<td><font size="6">2. How do I play the games on your website?</font></td>
+				<td><font>Our games are designed to be played directly in your web browser, without the need for any installations or downloads. Simply visit our website, choose a game you'd like to play, and click on the game button. The game will load in your browser, and you can start playing right away.</font></td>
+			</tr>
+			<tr height="150px">
+				<td><font size="6">3. How often do you release new games?</font></td>
+				<td><font>We strive to release new games regularly to keep our players entertained and engaged. The frequency of game releases may vary, but we are dedicated to providing fresh and exciting content for our community.</font></td>
+			</tr>
+			<tr height="150px">
+				<td><font size="6">4. May I get an autograph from Jeffrey Benne himself?</font></td>
+				<td><font>No. No you may not.</font></td>
+			</tr>
+		</table>
+		<br><br><br><br>
+		<img src="Files/Images/JeffreyOutline.png" width="150px"><br><br><br>
+		<font size="6" style="text-shadow: 0px 1px 7px #A7A7A7;">Web design by Jeffrey Benne, 9th Grade Freshman</font>
+		<br><br><br><br>
+		<div style="background-color: #0f0f0f;">
+			<br>
+			<font>Copyright 2023 BenneCo. All Rights Not Reserved.</font>
+			<br><br>
+			<table width="100%">
+				<tr height="75px">
+					<td width="50%" style="text-align: right;">
+						<a href="index.html" style="margin-right: 20px;">Home</a><br>
+						<a href="about.html" style="margin-right: 20px;">About</a><br>
+						<a href="faq.html" style="margin-right: 20px;">FAQ</a><br>
+						<a href="contact.html" style="margin-right: 20px;">Contact</a>
+					</td>
+					<td width="50%" style="text-align: left;">
+						<a href="flashgames.html" style="margin-left: 20px;">Flash Games</a><br>
+						<a href="htmlgames.html" style="margin-left: 20px;">HTML Games</a><br>
+						<a href="soundboards.html" style="margin-left: 20px;">Sound Boards</a><br>
+						<a href="emulators.html" style="margin-left: 20px;">Emulators</a>
+					</td>
+				</tr>
+			</table>
+			<br>
+		</div>
+	</div>
+<script>
+	window.onscroll = function() {
+        var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        if (scrollTop >= document.getElementById("d").offsetTop) {
+            document.getElementById("TopBar").style.position = "fixed";
+            document.getElementById("d").style.marginTop = "96px";
+        } else {
+            document.getElementById("TopBar").style.position = "static";
+            document.getElementById("d").style.marginTop = "0px";
+        }
+    }
+	function NavButton(url) {
+		window.location.href = url;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "fire-n-ice",
+  "version": "1.0.0",
+  "description": "A remake of a NES game with the same name: Fire 'n Ice",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx webpack --config webpack.dev.config.js",
+    "build": "npx webpack --config webpack.prod.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugenioenko/fire-n-ice.git"
+  },
+  "keywords": [
+    "nes",
+    "game",
+    "fire",
+    "ice",
+    "javascript"
+  ],
+  "author": "eugenioenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eugenioenko/fire-n-ice/issues"
+  },
+  "homepage": "https://github.com/eugenioenko/fire-n-ice#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "dependencies": {
+    "natives": "^1.1.6"
+  }
+}
