@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<script defer src="/__/firebase/9.22.1/firebase-app-compat.js"></script>
 <meta charset="utf-8">
 <title>Jeffrey Loves Games</title>
 <link rel="shortcut icon" type="image/jpg" href="Files/Images/JeffreyLovesGamesIcon.ico"/>
@@ -40,7 +41,7 @@
 		margin-right: 60px;
 	}
 	#FirstMessage {
-		background-image: url('Files/Images/contactbg.jpg');
+		background-image: url('Files/Images/flashgamesbg.jpg');
 		background-size: cover;
 		height: 500px;
 		width: 100%;
@@ -86,6 +87,20 @@
         background-color: #313131;
         cursor: pointer;
     }
+	.SoundButton {
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-size: 10px;
+		display: inline-block;
+		margin-bottom: 30px;
+		margin: 20px;
+		text-align: center;
+		width: 100px;
+	}
+	.ButtonsTitle {
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-size: 300%;
+		text-decoration: underline;
+	}
 </style>
 </head>
 
@@ -109,24 +124,19 @@
 	<div id="d"></div>
 	<div id="FirstMessage">
 		<div style="height: 100%">
-			<br><br><br><br>
-			<h1 style="font-size: 90px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">CONTACT</h1>
+			<br><br><br><br><br><br>
+			<h1 style="font-size: 90px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">FLASH GAMES&nbsp;</h1>
 		</div>
 	</div>
 	<div id="NextBlock" style="text-align: center">
-		<br><br><br><br>
-		<h1 style="margin: 0; margin-left: 5%; font-size: 45px; width: 90%; text-shadow: 0px 1px 7px #A7A7A7;">Contacting Jeffrey Benne</h1>
 		<br><br>
-		<table width="80%" style="margin-left: 10%;">
-			<tr>
-				<td width="50%"><img src="files/images/JeffreyPhone.png" alt=""></td>
-				<td width="40%"><font size="5">If you would like to contact Jeffrey Benne for questions or advice, please
-					write to his work email at 269bennej@msdr9.org. <br><br> Alternatively, you may call 
-					his phone number, which is 314-3913-432. <br><br> If you still have questions, 
-					you may visit his IP address, located at 63.245.36.141.
-				</font></td>
-			</tr>
-		</table>
+		<table style="width: 100%; height: 100px;" id="ButtonTable"></table>
+		<div id="ButtonsContainer" style="width: 100%;"></div>
+		<br>
+		<div id="swfview"></div>
+		<br><br><br><br><br>
+		<div id="swf" dir="ltr" style="text-align: center;" trbidi="on"></div>
+		<h1 id="gamename" style="font-size: 400%;"></h1>
 		<br><br><br><br>
 		<img src="Files/Images/JeffreyOutline.png" width="150px"><br><br><br>
 		<font size="6" style="text-shadow: 0px 1px 7px #A7A7A7;">Web design by Jeffrey Benne, 9th Grade Freshman</font>
@@ -154,6 +164,8 @@
 			<br>
 		</div>
 	</div>
+<script src="https://xxsibxx.github.io/ruffleembedsetup112/ruffle/ruffle.js"></script>
+<script src="Files/Javascript/flashgameslistclean.js"></script>
 <script>
 	window.onscroll = function() {
         var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -165,6 +177,24 @@
             document.getElementById("d").style.marginTop = "0px";
         }
     }
+	const flashfolderdir = "Files/FlashGames/"
+	for (let i = 0; i < window.flashgameslist.length; i+=2) {
+		if (window.flashgameslist.length - i != 1) {
+			var buttoncontainer = document.getElementById("ButtonTable");
+			gamefilename = "'"+flashfolderdir+flashgameslist[i][1]+"'"
+			gamefilename2 = "'"+flashfolderdir+flashgameslist[i+1][1]+"'"
+			buttoncontainer.innerHTML = buttoncontainer.innerHTML + '<tr><td><button class="SelectionButtons" onclick="LoadFlashGame('+gamefilename+',this)">'+flashgameslist[i][0]+'</button></td><td><button class="SelectionButtons" onclick="LoadFlashGame('+gamefilename2+',this)">'+flashgameslist[i+1][0]+'</button></td></tr>';
+			} else {
+			var buttoncontainer = document.getElementById("ButtonTable")
+			gamefilename = "'"+flashfolderdir+flashgameslist[i][1]+"'"
+			buttoncontainer.innerHTML = buttoncontainer.innerHTML + '<tr><td><button class="SelectionButtons" onclick="LoadFlashGame('+gamefilename+',this)">'+flashgameslist[i][0]+'</button></td></tr>';
+			}
+		}
+	function LoadFlashGame(File,Buttern) {
+		window.location.href = "#swfview";
+		document.getElementById("gamename").innerHTML = Buttern.innerHTML;
+		document.getElementById("swf").innerHTML = '<embed height="580" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="'+File+'" type="application/x-shockwave-flash" width="760"></embed>';
+	}
 	function NavButton(url) {
 		window.location.href = url;
 	}

@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<script defer src="/__/firebase/9.22.1/firebase-app-compat.js"></script>
 <meta charset="utf-8">
 <title>Jeffrey Loves Games</title>
 <link rel="shortcut icon" type="image/jpg" href="Files/Images/JeffreyLovesGamesIcon.ico"/>
@@ -40,7 +41,7 @@
 		margin-right: 60px;
 	}
 	#FirstMessage {
-		background-image: url('Files/Images/aboutbg.jpg');
+		background-image: url('Files/Images/valentin-beauvais-yVUQlyRlJSw-unsplash.jpg');
 		background-size: cover;
 		height: 500px;
 		width: 100%;
@@ -86,6 +87,20 @@
         background-color: #313131;
         cursor: pointer;
     }
+	.SoundButton {
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-size: 10px;
+		display: inline-block;
+		margin-bottom: 30px;
+		margin: 20px;
+		text-align: center;
+		width: 100px;
+	}
+	.ButtonsTitle {
+		text-shadow: 0px 1px 7px #A7A7A7;
+		font-size: 300%;
+		text-decoration: underline;
+	}
 </style>
 </head>
 
@@ -109,72 +124,26 @@
 	<div id="d"></div>
 	<div id="FirstMessage">
 		<div style="height: 100%">
-			<br><br><br><br>
-			<h1 style="font-size: 90px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">About Our Founder</h1>
+			<br><br><br><br><br><br>
+			<h1 style="font-size: 90px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">RETRO EMULATORS</h1>
 		</div>
 	</div>
 	<div id="NextBlock" style="text-align: center">
-		<br><br><br><br>
-		<h1 style="margin: 0; margin-left: 5%; font-size: 45px; width: 90%; text-shadow: 0px 1px 7px #A7A7A7;">Welcome to Jeffrey Loves Games.</h1>
 		<br><br>
-		<h2>Welcome to Jeffrey Loves Games. Our story begins with the founder, Jeffrey Benne, whose passion for games
-			and unwavering determination led him on an incredible journey from homelessness to creating a
-			thriving gaming company.</h2>
-		<br>
-		<table width="80%" style="margin-left: 10%;">
-			<tr>
-				<td width="50%"><img src="files/images/JeffreyHomeless.png" alt=""></td>
-				<td width="40%"><font size="5">Jeffreys life took an unexpected turn when he found himself facing homelessness.
-					Struggling to make ends meet, he sought solace in the world of video games. Gaming became an escape
-					from the harsh realities of his circumstances, providing him with a glimmer of hope and a source
-					of inspiration. <br><br>With nothing but his unwavering spirit and a strong desire to create,
-					Jeffrey decided to leverage his love for games and embark on a mission to change his life. He began
-					by collecting discarded electronic devices and salvaging parts to build a modest computer from
-					scratch.</font></td>
+		<table width="100%">
+			<tr width="100%">
+				<td><button class="SelectionButtons" onclick="NavButton('files/emulators/gameboy/index.html',this)">Gameboy</button></td>
 			</tr>
 		</table>
+		<br><br><br>
+		<img src="Files/Images/construction.gif" width="60px">
+		<img src="Files/Images/under_construction.gif" width="180px">
+		<img src="Files/Images/construction.gif" width="60px">
 		<br><br>
-		<table width="80%" style="margin-left: 10%;">
-			<tr>
-				<td width="40%"><font size="5">Setting up a small makeshift shack in his backyard, Jeffrey turned this humble
-					space into his gaming haven. Despite the challenges of his circumstances, he dedicated countless hours to
-					honing his skills in game development, teaching himself programming languages and studying game design
-					principles. <br><br>Driven by his passion and the desire to share his creations with others, Jeffrey 
-					started developing his own games within the confines of his backyard shack. He poured his heart and soul 
-					into each project, pushing the boundaries of what was possible with his limited resources.</font></td>
-				<td width="50%"><img src="files/images/JeffreyHoodie.png" alt=""></td>
-			</tr>
-		</table>
+		<img src="Files/Images/ICONE_EN_CONSTRUCTION.gif" width="360px">
 		<br><br>
-		<table width="80%" style="margin-left: 10%;">
-			<tr>
-				<td width="50%"><img src="files/images/JeffreySigma.png" alt=""></td>
-				<td width="40%"><font size="5">As Jeffreys reputation grew, so did his ambitions. With the support of his 
-					newfound community, he was able to secure a small loan to expand his operation. He relocated his modest 
-					shack to a proper workspace and assembled a dedicated team of like-minded individuals who shared his 
-					vision. <br><br>Together, they poured their collective creativity and expertise into developing games that 
-					captured the hearts of gamers around the world. Jeffrey Loves Games quickly became synonymous with 
-					innovation, quality, and a unique approach to storytelling within the gaming industry.</font></td>
-			</tr>
-		</table>
-		<br>
-		<h1 style="font-size: 50px; letter-spacing: 5px; text-shadow: 0px 2px 7px white;">Meet the Team</h1>
-		<br>
-		<table width="80%" style="margin-left: 10%;">
-			<tr>
-				<td width="25%"><img src="files/images/JeffreyCowboy.png" alt="" width="100%"><font size="4">Mr. Benne</font></td>
-				<td width="25%"><img src="files/images/AntonioBeach.png" alt="" width="100%"><font size="4">Antonio B. Sigma</font></td>
-				<td width="25%"><img src="files/images/CovanSuit.png" alt="" width="100%"><font size="4">Covan B. Urgerson</font></td>
-				<td width="25%"><img src="files/images/JacobSuit.png" alt="" width="100%"><font size="4">Jacob M. III</font></td>
-			</tr><br>
-			<tr>
-				<td width="25%"><img src="files/images/graysonhawaiian.png" alt="" width="100%"><font size="4">Haysin H. Hilliams</font></td>
-				<td width="25%"><img src="files/images/jackhippie.png" alt="" width="100%"><font size="4">Jack J. Jack</font></td>
-				<td width="25%"><img src="files/images/CharlieMilitary.png" alt="" width="100%"><font size="4">Charizzlus P. Guthrie</font></td>
-				<td width="25%"><img src="files/images/JackBuffet.png" alt="" width="100%"><font size="4">JACKSON. WILKE.</font></td>
-			</tr>
-		</table>
-		<br><br><br><br>
+		<img src="Files/Images/sorryconstruction.gif" width="120px">
+		<br><br><br><br><br><br>
 		<img src="Files/Images/JeffreyOutline.png" width="150px"><br><br><br>
 		<font size="6" style="text-shadow: 0px 1px 7px #A7A7A7;">Web design by Jeffrey Benne, 9th Grade Freshman</font>
 		<br><br><br><br>
